@@ -34,20 +34,19 @@ const appdata = {
 
     methods: {
         calcSouceAmout() {
-            this.discountAmount = prompt('割引後の価格を入力してください。')
-            this.discountRate = prompt('割引率を入力してください。')
+            this.discountAmount = isIntegerValidation(prompt('割引後の価格を入力してください。'))
+            this.discountRate = isIntegerValidation(prompt('割引率を入力してください。'))
             this.sourceAmount = this.discountAmount / (100 - this.discountRate) * 100
         },
         calcDiscountAmount() {
-            this.sourceAmount = prompt('元値を入力してください。')
-            this.discountRate = prompt('割引率を入力してください。')
+            this.sourceAmount = isIntegerValidation(prompt('元値を入力してください。'))
+            this.discountRate = isIntegerValidation(prompt('割引率を入力してください。'))
             this.discountAmount = this.sourceAmount * (100 - this.discountRate) / 100
             
         },
         calcDiscountRate() {
-            this.sourceAmount = prompt('元値を入力してください。')
-            this.discountAmount = prompt('割引後の価格を入力してください。')
-            // this.discountRate = (1 - (this.discountAmount / this.sourceAmount)) * 100 
+            this.sourceAmount = isIntegerValidation(prompt('元値を入力してください。'))
+            this.discountAmount = isIntegerValidation(prompt('割引後の価格を入力してください。'))
             this.discountRate = 100 - this.discountAmount / this.sourceAmount * 100
             
         }
