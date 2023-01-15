@@ -36,7 +36,7 @@ const appdata = {
         calcSouceAmout() {
             this.discountAmount = prompt('割引後の価格を入力してください。')
             this.discountRate = prompt('割引率を入力してください。')
-            this.sourceAmount = this.discountAmount / (100 - this.discountRate) / 100
+            this.sourceAmount = this.discountAmount / (100 - this.discountRate) * 100
         },
         calcDiscountAmount() {
             this.sourceAmount = prompt('元値を入力してください。')
