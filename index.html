@@ -39,19 +39,19 @@
     <div>
         <nav></nav>
         <main id="app">
-            <div class="d-grid gap-2">
+            <div class="d-grid gap-2 mt-3">
                 <button class="btn btn-primary" type="button" @click="calcSouceAmout()">元値を調べる</button>
                 <button class="btn btn-primary" type="button" @click="calcDiscountAmount()">割引後の価格を調べる</button>
                 <button class="btn btn-primary" type="button" @click="calcDiscountRate()">割引率を調べる</button>
               </div>
-              <div class="input-group mt-3">
-                <a class="list-group-item list-group-item-action">元　　　値：　{{ sourceAmount.toLocaleString() }}</a>
+              <div class="input-group mt-3" v-if="sourceAmount">
+                <a class="list-group-item list-group-item-action">元　　　値：　{{ sourceAmount.toLocaleString() }} 円</a>
             </div>
-              <div class="input-group mt-3">
-                <a class="list-group-item list-group-item-action">値引後価格：　{{ discountAmount.toLocaleString() }}</a>
+              <div class="input-group mt-3" v-if="discountAmount">
+                <a class="list-group-item list-group-item-action">値引後価格：　{{ discountAmount.toLocaleString() }} 円</a>
             </div>
-              <div class="input-group mt-3">
-                <a class="list-group-item list-group-item-action">割引率( ％ )：　{{ discountRate.toLocaleString() }}</a>
+              <div class="input-group mt-3" v-if="discountRate">
+                <a class="list-group-item list-group-item-action">割　引　率：　{{ discountRate.toLocaleString() }} %</a>
             </div>
         </main>
         <aside></aside>
