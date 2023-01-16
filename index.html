@@ -50,6 +50,9 @@
               <div class="input-group mt-3" v-if="discountAmount">
                 <a class="list-group-item list-group-item-action">値引後価格：　{{ discountAmount.toLocaleString() }} 円</a>
             </div>
+              <div class="input-group mt-3" v-if="differenceAmount">
+                <a class="list-group-item list-group-item-action">差　　　額：　{{ differenceAmount.toLocaleString() }} 円</a>
+            </div>
               <div class="input-group mt-3" v-if="discountRate">
                 <a class="list-group-item list-group-item-action">割　引　率：　{{ discountRate.toLocaleString() }} %</a>
             </div>
