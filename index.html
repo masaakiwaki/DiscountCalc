@@ -44,20 +44,14 @@
                 <button class="btn btn-primary" type="button" @click="calcDiscountAmount()">割引後の価格を調べる</button>
                 <button class="btn btn-primary" type="button" @click="calcDiscountRate()">割引率を調べる</button>
               </div>
-            <div class="input-group mt-3">
-                <span class="input-group-text">元　　　値</span>
-                <input type="text" class="form-control" v-model="sourceAmount"
-                    aria-label="Amount (to the nearest dollar)">
+              <div class="input-group mt-3">
+                <a class="list-group-item list-group-item-action">元　　　値：　{{ sourceAmount.toLocaleString() }}</a>
             </div>
-            <div class="input-group mt-3">
-                <span class="input-group-text">割引後価格</span>
-                <input type="text" class="form-control" v-model="discountAmount"
-                    aria-label="Amount (to the nearest dollar)">
+              <div class="input-group mt-3">
+                <a class="list-group-item list-group-item-action">値引後価格：　{{ discountAmount.toLocaleString() }}</a>
             </div>
-            <div class="input-group mt-3">
-                <span class="input-group-text">割引率(％)</span>
-                <input type="text" class="form-control" v-model="discountRate"
-                    aria-label="Amount (to the nearest dollar)">
+              <div class="input-group mt-3">
+                <a class="list-group-item list-group-item-action">割引率( ％ )：　{{ discountRate.toLocaleString() }}</a>
             </div>
         </main>
         <aside></aside>
